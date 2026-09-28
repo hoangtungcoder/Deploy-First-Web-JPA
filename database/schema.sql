@@ -1,0 +1,14 @@
+CREATE DATABASE IF NOT EXISTS murach
+    CHARACTER SET utf8mb4
+    COLLATE utf8mb4_unicode_ci;
+
+USE murach;
+
+CREATE TABLE IF NOT EXISTS `User` (
+    UserID BIGINT NOT NULL AUTO_INCREMENT,
+    Email VARCHAR(255) NOT NULL,
+    FirstName VARCHAR(50) NOT NULL,
+    LastName VARCHAR(50) NOT NULL,
+    PRIMARY KEY (UserID),
+    CONSTRAINT uk_user_email UNIQUE (Email)
+);
